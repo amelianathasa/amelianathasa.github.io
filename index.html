@@ -27,6 +27,50 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <style type="text/css">
+    zebra-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 2px 3px 1px #ddd;
+        overflow: hidden;
+        border:10px solid #fff;
+    }
+    .zebra-table th,.zebra-table td{
+        vertical-align: top;
+        padding:10px 7px;
+        text-align: left;
+        margin:0;
+    }
+    .zebra-table tbody tr:nth-child(odd) { /* Make table like zebra */
+        background:#eee;
+    }
+
+ </style>
+
+ <script type="text/javascript">
+        $(function () {
+          $.get("terkini.json", function (obj) {
+            var str = "<table border=1>";
+  
+            str += "<tr><td>No</td><td>Judul</td><td>Kategori</td><td>Waktu Publish</td><td>Waktu Scrapping</td></tr>";
+            $.each(obj, function (n, data) {
+              // str += "<tr><td>" + (n+1) + "</td><td>"+ data.Judul + "</td><td>" + data.Kategori + "</td><td>"+ data.WaktuPublish + "</td><td>" + data.WaktuScrapping + "</td></tr>";
+            str += "<tr><td>" + (n+1)+ "</td>";
+            str += "<td>" + data.Judul +"</td>";
+            str += "<td>" + data.Kategori+"</td>";
+            str += "<td>" + data.WaktuPublish+"</td>";
+            str += "<td>" + data.WaktuScraping+"</td></tr>";
+              
+            });
+  
+            str += "</table>";
+            $("#terkini_json").html(str);
+          });
+        });
+</script>
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -70,6 +114,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#screens">PHOTOS</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#scrap">DATA SCRAPPING</a>
                     </li>
 
                     <!-- Dropdown Menu -->          
@@ -199,7 +246,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Mendengarkan Music</a></h5>
                              <p class="p-large p-heading">Lagu ballad dan KPOP <div class="card-body">
-                               
+
                              <audio controls>
 
                                 <source src="music/Irreplaceable.m4a" type="audio/mpeg">
@@ -559,7 +606,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/1.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/1.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/1.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -567,7 +614,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/2.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/2.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/2.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -575,7 +622,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/3.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/3.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/3.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -583,7 +630,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/4.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/4.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/4.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -591,7 +638,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/5.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/5.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/5.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -599,7 +646,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/6.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/6.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/6.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -607,7 +654,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/7.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/7.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/7.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -615,7 +662,7 @@
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <a href="images/8.jpg" class="popup-link" data-effect="fadeIn">
-                                        <img class="img-fluid" src="images/8.jpg" alt="alternative">
+                                        <img class="img-fluid" src="images/8.jpg" alt="Foto Tidak Dapat di Load">
                                     </a>
                                 </div>
                                 <!-- end of slide -->
@@ -843,6 +890,25 @@
     </div> <!-- end of basic-3 -->
     <!-- end of download -->
 
+    <!-- Download -->
+    <div id="scrap" class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="image-container">
+                        <img class="img-fluid" src="images/download-iphone.png" alt="alternative">
+                    </div>  --><!-- end of image-container -->
+                    <h2><b>BERITA TERKINI</b></h2>
+                    <br>
+                    <center><div id="terkini_json" class="zebra-table"></div>
+                  
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+       
+    </div> <!-- end of basic-3 -->
+    <!-- end of download -->
+
 
     <!-- Footer -->
     <div class="footer">
@@ -964,3 +1030,5 @@
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 </html>
+
+<!-- Kode Java Script -->
