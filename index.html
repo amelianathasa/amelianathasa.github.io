@@ -74,17 +74,17 @@
 
 <script type="text/javascript">
         $(function () {
-          $.get("hasilScrapping.json", function (obj) {
+          $.get("./hasilScrapping.json", function (obj) {
             var str = "<table border=1>";
   
             str += "<tr><td>No</td><td>Artist</td><td>Title</td><td>Albums</td><td>Scrapping Time</td></tr>";
   
-            $.each(obj, function (n, data) {
+            $.each(obj, function (n, hasil) {
               str += "<tr><td>" + (n + 1) + "</td>";
-              str += "<td>" + data.Artist + "</td>";
-              str += "<td>" + data.Title + "</td>";
-              str += "<td>" + data.Image + "</td>";
-              str += "<td>" + data.WaktuScraping + "</td>";
+              str += "<td>" + hasil.Artist + "</td>";
+              str += "<td>" + hasil.Title + "</td>";
+              str += "<td>" + "<img scr=" + hasil.Image + ">" + "</td>";
+              str += "<td>" + hasil.WaktuScraping + "</td></tr>";
             });
   
             str += "</table>";
